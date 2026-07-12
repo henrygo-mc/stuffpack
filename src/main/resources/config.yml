@@ -1,0 +1,2 @@
+default_coins: 1000
+teleport_request_timeout: 60
