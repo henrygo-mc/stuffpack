@@ -86,7 +86,7 @@ mvn clean package
 
 ## 开发者
 
-HenryGo-mc
+HenryGo
 
 ## 许可证
 
