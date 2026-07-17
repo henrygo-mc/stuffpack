@@ -1,0 +1,89 @@
+name: StuffPack
+version: 1.1.0
+main: com.henrygo.stuffpack.StuffPack
+api-version: '1.21'
+description: A minecraft paper server plugin which is stuffed with stuff and is continually being stuffed more
+author: StuffPack
+commands:
+  coin:
+    description: Manage coins
+    usage: /coin <give|take|pay|balance> [player] [amount]
+  dom:
+    description: Manage domains
+    usage: /dom <create|tp>
+  tpa:
+    description: Request teleport to player
+    usage: /tpa <player>
+  tpahere:
+    description: Request player to teleport to you
+    usage: /tpahere <player>
+  tpaccept:
+    description: Accept teleport request
+    usage: /tpaccept
+  tpignore:
+    description: Ignore teleport request
+    usage: /tpignore
+  back:
+    description: Teleport back to previous location
+    usage: /back
+  help:
+    description: Show help commands
+    usage: /help
+  login:
+    description: Login to your account
+    usage: /login <password>
+  reg:
+    description: Register a new account
+    usage: /reg <password> <confirmPassword>
+  cp:
+    description: Change password
+    usage: /cp <oldPassword> <newPassword> <confirmPassword>
+  acp:
+    description: Admin change password
+    usage: /acp <player> <newPassword>
+  spkad:
+    description: Force player to speak
+    usage: /spkad <player> <message>
+  offms:
+    description: Send offline message to player
+    usage: /offms <player/server> <content>
+  rd:
+    description: Mark messages as read
+    usage: /rd
+  msread:
+    description: Read all messages
+    usage: /msread
+  pic:
+    description: Manage pictures
+    usage: /pic give <URL> <allowBreak>
+  fakeplayer:
+    description: Manage fake players
+    usage: /fakeplayer <spawn/remove/list> [name] [skinUrl]
+  privatedoor:
+    description: Get private door
+    usage: /privatedoor [amount]
+permissions:
+  stuffpack.coin.give:
+    description: Allow giving coins
+    default: op
+  stuffpack.coin.take:
+    description: Allow taking coins
+    default: op
+  stuffpack.coin.balance.other:
+    description: Allow viewing other players' balances
+    default: op
+  stuffpack.admin.acp:
+    description: Allow admin change password
+    default: op
+  stuffpack.admin:
+    description: Allow all admin commands
+    default: op
+  stuffpack.picture:
+    description: Allow creating pictures
+    default: op
+  stuffpack.picture.admin:
+    description: Allow managing pictures
+    default: op
+  stuffpack.fakeplayer:
+    description: Allow managing fake players
+    default: op
