@@ -29,6 +29,7 @@
 - `/dom tp <ID/编号>` - 传送到领地
 - `/dom addadmin <领地ID> <玩家>` - 添加领地管理员
 - `/dom name <领地ID> <新名称>` - 修改领地名称
+- `/dom move <领地ID/名称> <x偏移> <y偏移> <z偏移>` - 移动领地（如 x+1 y-1 z+0）
 - `/dom ad <领地名称>` - 管理员强制进入任意领地后台（需权限）
 - `/dom ad delete <领地名称>` - 管理员强制删除任意领地（需权限）
 
@@ -49,6 +50,16 @@
 - `/pic give <URL> <是否可破坏>` - 获取自定义图片地图
 - 小图片会自动放大至填满整张地图（128x128像素）
 
+#### 7. 假玩家系统fakeplayer spawn <名称> [皮肤URL]
+- `/fakeplayer spawn <名称> [皮肤URL]` - 生成假玩家（需权限）
+- `/fakeplayer remove <名称>` - 移除假玩家（需权限）
+- `/fakeplayer list` - 列出所有假玩家（需权限）
+
+#### 8. 私人门系统
+- `/privatedoor [数量]` - 获取私人门（需OP权限）
+- 私人门只有放置者可以打开，其他人无法开启
+- 私人门只有放置者或管理员可以破坏
+
 ### 权限系统
 
 | 权限节点 | 描述 | 默认值 |
@@ -58,6 +69,8 @@
 | `stuffpack.coin.take` | 扣除金币权限 | OP |
 | `stuffpack.coin.balance.other` | 查看他人余额权限 | OP |
 | `stuffpack.picture.use` | 使用图片系统权限 | OP |
+| `stuffpack.fakeplayer` | 使用假玩家系统权限 | OP |
+| `stuffpack.privatedoor` | 使用私人门系统权限 | OP |
 
 ### 技术栈
 
@@ -125,6 +138,7 @@ A minecraft paper server plugin which is stuffed with stuff and is continually b
 - `/dom tp <ID/number>` - Teleport to a territory
 - `/dom addadmin <territory ID> <player>` - Add territory admin
 - `/dom name <territory ID> <new name>` - Rename territory
+- `/dom move <territory ID/name> <x offset> <y offset> <z offset>` - Move territory (e.g., x+1 y-1 z+0)
 - `/dom ad <territory name>` - Admin: Force access to any territory (requires permission)
 - `/dom ad delete <territory name>` - Admin: Force delete any territory (requires permission)
 
@@ -145,6 +159,16 @@ A minecraft paper server plugin which is stuffed with stuff and is continually b
 - `/pic give <URL> <breakable>` - Get a custom image map
 - Small images will be automatically enlarged to fill the entire map (128x128 pixels)
 
+#### 7. Fake Player System
+- `/fakeplayer spawn <name> [skin URL]` - Spawn a fake player (requires permission)
+- `/fakeplayer remove <name>` - Remove a fake player (requires permission)
+- `/fakeplayer list` - List all fake players (requires permission)
+
+#### 8. Private Door System
+- `/privatedoor [amount]` - Get private doors (requires OP)
+- Only the placer can open private doors
+- Only the placer or admins can break private doors
+
 ### Permission System
 
 | Permission Node | Description | Default |
@@ -154,6 +178,8 @@ A minecraft paper server plugin which is stuffed with stuff and is continually b
 | `stuffpack.coin.take` | Take coins permission | OP |
 | `stuffpack.coin.balance.other` | View other's balance permission | OP |
 | `stuffpack.picture.use` | Use picture system permission | OP |
+| `stuffpack.fakeplayer` | Use fake player system permission | OP |
+| `stuffpack.privatedoor` | Use private door system permission | OP |
 
 ### Tech Stack
 
