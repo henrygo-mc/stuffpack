@@ -1,0 +1,115 @@
+default_coins: 1000
+teleport_request_timeout: 60
+
+# ========================================
+# 功能模块开关
+# 不需要的功能设为 false 即可禁用
+# ========================================
+modules:
+  # 登录系统
+  login: true
+  # 领地系统
+  domain: true
+  # 经济/签到系统
+  coin: true
+  # TPA 传送
+  teleport: true
+  # 返回死亡点
+  back: true
+  # 假玩家系统
+  fakeplayer: true
+  # 图片地图系统
+  picture: true
+  # 私信系统
+  message: true
+  # 私密门系统
+  privatedoor: true
+  # 自定义音乐系统
+  music: true
+  # 性能优化
+  performance: true
+
+sign:
+  reward: 100
+  dailyLimit: 1
+
+login:
+  sessionTimeout: 3600000
+
+performance:
+  progressiveViewDistance: true
+  afkOptimization: true
+  afkTimeout: 120
+  afkViewDistance: 4
+  afkSimulationDistance: 4
+
+# ========================================
+# 音乐系统配置
+# 资源包推送已交给 server.properties 管理
+# 插件不再自动推送资源包
+# ========================================
+music:
+  # 玩家加入时是否由插件自动推送资源包
+  # ⚠️ 强烈建议设为 false，在 server.properties 中配置资源包
+  # 这样不会出现连接冲突问题
+  auto-send-resourcepack: false
+  
+  # 资源包格式版本（Minecraft 不同版本需要不同的值）
+  # 15 = 1.20 - 1.20.1
+  # 18 = 1.20.4
+  # 32 = 1.21
+  # 34 = 1.21.3 / 1.21.4
+  # 41 = 1.21.3+
+  pack-format: 34
+
+fakePlayers:
+  '0':
+    name: 领地看管者
+    world: world_the_end
+    x: 31.5
+    y: 65.0
+    z: 7.5
+    yaw: -73.42361450195312
+    pitch: 0.0
+    skin: ''
+    leftClickCommand: ''
+  '1':
+    name: checkin
+    world: world
+    x: 78.5
+    y: 65.0
+    z: 46.5
+    yaw: 6.537696838378906
+    pitch: 0.0
+    skin: ''
+    leftClickCommand: tag @s add needcheck
+  '2':
+    name: grave
+    world: world
+    x: 72.5
+    y: 65.0
+    z: 46.5
+    yaw: -49.71693801879883
+    pitch: 0.0
+    skin: ''
+    leftClickCommand: dom tp 1
+  '3':
+    name: QQ群:1073715811
+    world: world
+    x: 81.5
+    y: 65.0
+    z: 46.5
+    yaw: 37.301475524902344
+    pitch: 0.0
+    skin: ''
+    leftClickCommand: ''
+  '4':
+    name: random-tp
+    world: world
+    x: 75.5
+    y: 65.0
+    z: 46.5
+    yaw: -28.04119873046875
+    pitch: 0.0
+    skin: ''
+    leftClickCommand: spreadplayers ~ ~ 100 7000 false @s
